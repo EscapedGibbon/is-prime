@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "eslint": "eslint src",
+    "dev": "node src/index.js",
     "eslint-fix": "npm run eslint -- --fix",
     "prepack": "rollup -c",
     "prettier": "prettier --check src",

@@ -1,7 +1,16 @@
 /**
- * Returns a very important number
- * @return {number}
+ * Returns if the number is prime
+ * @return {boolean}
  */
-export function myModule() {
-  return 42;
+function isPrime(number) {
+  let internal = number - 1;
+
+  while (internal > 1) {
+    if (number % internal === 0) return false;
+    internal--;
+  }
+
+  return true;
 }
+
+console.log(isPrime(45));
