@@ -1,7 +1,10 @@
-import { myModule } from '..';
+import isPrime from '../index';
 
-describe('test myModule', () => {
-  it('should return 42', () => {
-    expect(myModule()).toStrictEqual(42);
+describe('verify isPrime', () => {
+  it('should return false', () => {
+    expect(isPrime(6)).toStrictEqual(false);
+  });
+  it('should return true', () => {
+    expect(isPrime(3)).toStrictEqual(true);
   });
 });
