@@ -11,6 +11,7 @@
   "scripts": {
     "eslint": "eslint src",
     "dev": "node src/index.js",
+    "dev2": "node src/testing.js",
     "eslint-fix": "npm run eslint -- --fix",
     "prepack": "rollup -c",
     "prettier": "prettier --check src",
