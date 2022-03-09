@@ -7,4 +7,11 @@ describe('verify isPrime', () => {
   it('should return true', () => {
     expect(isPrime(3)).toStrictEqual(true);
   });
+
+  it('should return true', () => {
+    expect(isPrime(2)).toStrictEqual(true);
+  });
+  it('should return true', () => {
+    expect(isPrime(1)).toStrictEqual(true);
+  });
 });
