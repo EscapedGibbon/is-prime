@@ -5,7 +5,7 @@ describe('verify isPrime', () => {
     expect(isPrime(6)).toStrictEqual(false);
   });
   it('should return true', () => {
-    expect(isPrime(3)).toStrictEqual(true);
+    expect(isPrime(15)).toStrictEqual(false);
   });
 
   it('should return true', () => {
