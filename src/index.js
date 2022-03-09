@@ -5,14 +5,20 @@ const { tSImportEqualsDeclaration } = require('@babel/types');
  * @return {boolean}
  */
 function isPrime(number) {
-  let internal = Math.round(Math.sqrt(number));
+  if (number === 1) {
+    return false;
+  } else if (number === 0) {
+    console.log('Exception');
+  } else {
+    let internal = Math.abs(Math.round(Math.sqrt(number)));
 
-  while (internal > 1) {
-    if (number % internal === 0) return false;
-    internal--;
+    while (internal > 1) {
+      if (number % internal === 0) return false;
+      internal--;
+    }
+
+    return true;
   }
-
-  return true;
 }
 
 module.exports = isPrime;
