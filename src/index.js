@@ -8,7 +8,7 @@ function isPrime(number) {
   if (number === 1) {
     return false;
   } else if (number === 0) {
-    console.log('Exception');
+    return null;
   } else {
     let internal = Math.abs(Math.round(Math.sqrt(number)));
 

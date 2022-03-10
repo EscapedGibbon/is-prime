@@ -1,17 +1,20 @@
 import isPrime from '../index';
 
 describe('verify isPrime', () => {
-  it('should return false', () => {
+  it('testingSix', () => {
     expect(isPrime(6)).toStrictEqual(false);
   });
-  it('should return true', () => {
+  it('testingFifteen', () => {
     expect(isPrime(15)).toStrictEqual(false);
   });
 
-  it('should return true', () => {
+  it('testingTwo', () => {
     expect(isPrime(2)).toStrictEqual(true);
   });
-  it('should return true', () => {
+  it('testingOne', () => {
     expect(isPrime(1)).toStrictEqual(false);
+  });
+  it('testingZero', () => {
+    expect(isPrime(0)).toStrictEqual(null);
   });
 });
