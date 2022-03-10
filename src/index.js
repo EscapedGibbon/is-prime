@@ -1,24 +1,30 @@
-const { tSImportEqualsDeclaration } = require('@babel/types');
+const { tSImportEqualsDeclaration, is } = require('@babel/types');
 
 /**
- * Returns if the number is prime
- * @return {boolean}
+ * Checks if the number is prime
+ * @param {number} number - a number to check whether it's prime or not
+ * @returns {boolean}
  */
 function isPrime(number) {
+  if (
+    number <= 0 ||
+    typeof number !== 'number' ||
+    number !== Math.round(number)
+  ) {
+    throw new Error('Exception error');
+  }
   if (number === 1) {
     return false;
-  } else if (number === 0) {
-    return null;
-  } else {
-    let internal = Math.abs(Math.round(Math.sqrt(number)));
-
-    while (internal > 1) {
-      if (number % internal === 0) return false;
-      internal--;
-    }
-
-    return true;
   }
+  let internal = Math.round(Math.sqrt(number));
+
+  while (internal > 1) {
+    if (number % internal === 0) return false;
+    internal--;
+  }
+
+  return true;
 }
 
+console.log(isPrime(2));
 module.exports = isPrime;

@@ -10,7 +10,7 @@ describe('verify isPrime', () => {
   it('testingOne', () => {
     expect(isPrime(1)).toStrictEqual(false);
   });
-  it('testingZero', () => {
-    expect(isPrime(0)).toStrictEqual(null);
+  it('testingNegative', () => {
+    expect(() => isPrime(-7)).toThrowError('Exception error');
   });
 });
