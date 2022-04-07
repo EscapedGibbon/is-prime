@@ -1,4 +1,4 @@
-const { tSImportEqualsDeclaration, is } = require('@babel/types');
+//const { tSImportEqualsDeclaration, is } = require('@babel/types');
 
 /**
  * Checks if the number is prime
